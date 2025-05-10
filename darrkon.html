@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto Mono", monospace;
+      }
+      body {
+        background-color: #111;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .container {
+        background: #1e1e1e;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 30px #aaa;
+        text-align: center;
+        width: 90%;
+        max-width: 600px;
+        display: none;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 20px 0;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+      .btn-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .btn {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .btn:hover {
+        background: #fff;
+        color: #111;
+      }
+      .header {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .subheader {
+        font-size: 14px;
+        color: #aaa;
+      }
+      iframe {
+        width: 100%;
+        height: 80vh;
+        margin-top: 20px;
+        border: none;
+      }
+      .auth-container {
+        background: #1e1e1e;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 30px #aaa;
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="auth-container" id="authContainer">
+      <div class="header">Password Protected</div>
+      <div class="subheader">Enter the access password</div>
+      <input type="password" id="passwordInput" placeholder="Enter Password" />
+      <button class="btn" onclick="checkPassword()">Enter</button>
+    </div>
+
+    <div class="container" id="mainContainer">
+      <div class="header">
+        Darrkon <span style="font-size: 0.8em">&#xf09b;</span>
+      </div>
+      <div class="subheader">Where shadows browse in peace! =-)</div>
+      <input
+        type="text"
+        id="urlInput"
+        placeholder="Enter URL or Search Query"
+      />
+      <div class="btn-container">
+        <button class="btn" onclick="launchProxy('iframe')">Iframe</button>
+        <button class="btn" onclick="launchProxy('helios')">Helios</button>
+        <button class="btn" onclick="launchProxy('blob')">Blob</button>
+      </div>
+
+      <!-- Cloak and Games Buttons -->
+      <div class="btn-container">
+        <button class="btn" onclick="toggleCloakMenu()">Cloak</button>
+        <button class="btn" onclick="toggleGamesMenu()">Games</button>
+      </div>
+
+      <!-- CLOAK MENU -->
+      <div
+        class="container"
+        id="cloakMenu"
+        style="display: none; margin-top: 20px"
+      >
+        <div class="header">Change Tab Title</div>
+        <div class="btn-container">
+          <button class="btn" onclick="document.title='Google Docs'">
+            Google Docs
+          </button>
+          <button class="btn" onclick="document.title='Classroom'">
+            Classroom
+          </button>
+          <button class="btn" onclick="document.title='Home'">Home</button>
+          <button class="btn" onclick="document.title='Creekside PL Time'">
+            Creekside PL Time
+          </button>
+          <button class="btn" onclick="document.title='New Tab'">
+            New Tab
+          </button>
+        </div>
+      </div>
+
+      <!-- GAMES MENU -->
+      <div
+        class="container"
+        id="gamesMenu"
+        style="
+          display: none;
+          margin-top: 20px;
+          max-height: 300px;
+          overflow-y: auto;
+        "
+      >
+        <div class="header">Games / Proxies</div>
+        <ul style="text-align: left; margin-top: 10px">
+          <li>
+            <a href="https://us4-z.global.ssl.fastly.net/" target="_blank"
+              >US4 Proxy Z</a
+            >
+          </li>
+          <li>
+            <a href="https://us4-v.global.ssl.fastly.net/" target="_blank"
+              >US4 Proxy V</a
+            >
+          </li>
+          <li>
+            <a href="https://cesium.insviro.com/" target="_blank"
+              >Cesium Browser</a
+            >
+          </li>
+          <li>
+            <a href="https://writingessayepicguide.lol/en_US/" target="_blank"
+              >Nebula Browser</a
+            >
+          </li>
+          <li>
+            <a href="https://msr25s-8080.csb.app/" target="_blank"
+              >Nebula (Alt)</a
+            >
+          </li>
+          <li>
+            <a href="https://travel.kigurun.ru/" target="_blank">DayDreamX</a>
+          </li>
+          <li>
+            <a href="https://pcbtnghvzx.elliott.ca/" target="_blank">UniUb 1</a>
+          </li>
+          <li>
+            <a href="https://ogiqbptdki.joemullins.info/" target="_blank"
+              >UniUb 2</a
+            >
+          </li>
+          <li>
+            <a href="https://quietschizophrenia.120v.ac/" target="_blank"
+              >UniUb 3</a
+            >
+          </li>
+          <li>
+            <a href="https://maths.onl/" target="_blank">UniUB WORKING!!</a>
+          </li>
+          <li>
+            <a href="https://void.ubyis.org/" target="_blank">Void Network</a>
+          </li>
+          <li>
+            <a href="https://ubgusa.com/" target="_blank"
+              >America’s Unbl*cker</a
+            >
+          </li>
+          <li>
+            <a href="https://vans.webconstructions.co.uk/" target="_blank"
+              >CloudBurst Proxy</a
+            >
+          </li>
+          <li>
+            <a href="https://6aprdwx4pk.jellyfl1x.es/" target="_blank"
+              >Moonlight (Untested)</a
+            >
+          </li>
+          <li>
+            <a href="https://englishwork4school.mka.in/" target="_blank"
+              >SVY Central</a
+            >
+          </li>
+          <li>
+            <a href="https://oil.radicalnetworks.org/" target="_blank"
+              >Emerald</a
+            >
+          </li>
+          <li>
+            <a href="https://phantomgames.dev/" target="_blank"
+              >PhantomGames (Blocked Games)</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div id="output"></div>
+    </div>
+
+    <script>
+      const correctPassword = "5084820933";
+
+      function checkPassword() {
+        const input = document.getElementById("passwordInput").value;
+        if (input === correctPassword) {
+          document.getElementById("authContainer").style.display = "none";
+          document.getElementById("mainContainer").style.display = "block";
+        } else {
+          alert("Incorrect password!");
+        }
+      }
+
+      function launchProxy(type) {
+        const input = document.getElementById("urlInput").value.trim();
+        const output = document.getElementById("output");
+        if (!input) return alert("Please enter a URL.");
+
+        switch (type) {
+          case "iframe":
+            output.innerHTML = `<iframe src="${input}"></iframe>`;
+            break;
+          case "helios":
+            window.open("https://helios-browser.ct.ws/", "_blank");
+            break;
+          case "blob":
+            fetch(input)
+              .then((response) => response.blob())
+              .then((blob) => {
+                const blobURL = URL.createObjectURL(blob);
+                output.innerHTML = `<iframe src="${blobURL}"></iframe>`;
+              })
+              .catch((err) => alert("Failed to load blob URL: " + err));
+            break;
+        }
+      }
+
+      function toggleCloakMenu() {
+        const menu = document.getElementById("cloakMenu");
+        menu.style.display = menu.style.display === "none" ? "block" : "none";
+      }
+
+      function toggleGamesMenu() {
+        const menu = document.getElementById("gamesMenu");
+        menu.style.display = menu.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </body>
+</html>
