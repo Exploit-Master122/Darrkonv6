@@ -4,10 +4,10 @@ Here are the links:
 ```
 https://64hgl7.csb.app/
 ```
-OR
+OR (Better Version:)
 ```
 https://qh2j4j.csb.app/
 ```
 You can download the HTML file by clicking it above.
 ***Fork the sandbox in the website to deploy!***
-Follow for more exploits,-Exploit-Master122
+Follow for more exploits,-Exploit-Master122 =-)
