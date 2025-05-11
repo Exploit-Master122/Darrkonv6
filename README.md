@@ -1,7 +1,7 @@
 ***Darrkon is a sleek black proxy that has features like cloaking,files,blob,games,and much more!!***
 Please star if you fork or tweak the code!
 ***LINKS:***
-Before we get to the links part,there is a password saver.Go to the files to see.
+Before we get to the links part,there is a password saver.Go to the files to see.Also,the Helios.html file,I give a lot of credit to Dinguschan-OwO on Github.***DOWNLOAD ALL THE FILES!! THEY WORK WELL!***
 
 (Raw,Basic version): v1:
 ```
