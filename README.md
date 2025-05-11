@@ -1,6 +1,8 @@
 ***Darrkon is a sleek black proxy that has features like cloaking,files,blob,games,and much more!!***
 Please star if you fork or tweak the code!
 ***LINKS:***
+Before we get to the links part,there is a password saver.Go to the files to see.
+
 (Raw,Basic version): v1:
 ```
 https://totallyschoolwork.playcode.io/
