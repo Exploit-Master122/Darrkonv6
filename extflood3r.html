@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExtFlood3r</title>
+  <link rel="shortcut icon" type="image/png" href="TODO">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const main = "https://raw.githubusercontent.com/Blobby-Boi/ExtFlood3r/refs/heads/main/index.html";
+      const fallback = "https://cdn.jsdelivr.net/gh/Blobby-Boi/ExtFlood3r/index.html";
+
+      fetch(main)
+        .then(response => {
+          if (!response.ok) throw new Error("Primary URL failed");
+          return response.text();
+        })
+        .catch(() => {
+          return fetch(fallback).then(response => {
+            if (!response.ok) throw new Error("Fallback URL failed");
+            return response.text();
+          });
+        })
+        .then(html => {
+          document.open();
+          document.write(html);
+          document.close();
+        });
+    });
+  </script>
+</head>
+</html>
