@@ -34,7 +34,7 @@ https://night-x.com/projects/
 - https://exploit-master122.github.io/Darrkon-v4/
 - https://exploit-master122.github.io/Darrkonv5/
 
--Follow for more exploits, Exploit-Master122 🙂 =-D
+Follow for more exploits, Exploit-Master122 🙂 =-D
   
 
 
