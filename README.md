@@ -27,8 +27,17 @@ And upload the file.
 https://night-x.com/projects/
 
 
-(best version)
-https://exploit-master122.github.io/Darrkon-v4/
+(Versions from top to bottom ***V1 to V5***)
+- https://totallyschoolwork.playcode.io/
+- https://64hgl7.csb.app/
+- https://qh2j4j.csb.app/
+- https://exploit-master122.github.io/Darrkon-v4/
+- https://exploit-master122.github.io/Darrkonv5/
+
+-Follow for more Exploits, Exploit-Master122
+  
+
+
 
 
 
