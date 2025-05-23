@@ -47,6 +47,5 @@ Follow for more exploits, Exploit-Master122 🙂 =-D
 
 
 
-Follow for more exploits,-Exploit-Master122 =-)
 
 
