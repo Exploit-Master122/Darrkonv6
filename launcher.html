@@ -1,55 +1,142 @@
-<button class="cool-btn" onclick="openFullscreenIframe()">🚀 Launch Darrkonv5</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Classes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(ellipse at bottom, #1b0036, #000);
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
 
-<style>
-  .cool-btn {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    padding: 12px 24px;
-    color: #fff;
-    font-size: 16px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-shadow: 0 0 5px rgba(255,255,255,0.2);
-  }
+    canvas#stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
 
-  .cool-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
-    transform: scale(1.05);
-  }
-</style>
+    .center {
+      position: relative;
+      z-index: 1;
+      top: 40vh;
+      transform: translateY(-50%);
+    }
 
-<script>
-  function openFullscreenIframe() {
-    const win = window.open();
-    const iframe = `
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>Darrkonv5</title>
-          <style>
-            html, body {
-              margin: 0;
-              padding: 0;
-              height: 100%;
-              overflow: hidden;
-            }
-            iframe {
-              border: none;
-              width: 100%;
-              height: 100%;
-            }
-          </style>
-        </head>
-        <body>
-          <iframe src="https://exploit-master122.github.io/Darrkonv5/" allowfullscreen></iframe>
-        </body>
-      </html>
-    `;
-    win.document.write(iframe);
-    win.document.close();
-  }
-</script>
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 0 25px #c87fff;
+    }
+
+    .highlight {
+      color: #d877ff;
+      text-shadow: 0 0 35px #d877ff;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    .launch-btn {
+      background: rgba(216, 119, 255, 0.1);
+      border: 1px solid #d877ff;
+      padding: 12px 28px;
+      border-radius: 30px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px #d877ff80;
+    }
+
+    .launch-btn:hover {
+      background: #d877ff;
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #d877ff;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+
+  <div class="center">
+    <h1>Welcome to <span class="highlight">Darrkon</span></h1>
+    <p>A proxy built for a student...</p>
+    <button class="launch-btn" onclick="launchDarrkon()">Launch</button>
+  </div>
+
+  <script>
+    function launchDarrkon() {
+      const win = window.open();
+      const content = `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>Darrkon Proxy</title>
+            <style>
+              html, body { margin: 0; height: 100%; overflow: hidden; }
+              iframe { width: 100%; height: 100%; border: none; }
+            </style>
+          </head>
+          <body>
+            <iframe src="https://exploit-master122.github.io/Darrkonv5/" allowfullscreen></iframe>
+          </body>
+        </html>`;
+      win.document.write(content);
+      win.document.close();
+    }
+
+    // Star background
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
+    let stars = [], numStars = 300;
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+
+    for (let i = 0; i < numStars; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.5,
+        velocity: Math.random() * 0.3 + 0.1
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "white";
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+        star.y += star.velocity;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+</body>
+</html>
