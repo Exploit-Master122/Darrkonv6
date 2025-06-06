@@ -33,8 +33,10 @@ https://night-x.com/projects/
 - https://qh2j4j.csb.app/
 - https://exploit-master122.github.io/Darrkon-v4/
 - https://exploit-master122.github.io/Darrkonv5/
+- https://darrkonv4.playcode.io/
 
 Follow for more exploits, Exploit-Master122 🙂 =-D
+Thanks to ultraviolet dev for proxy server.
   
 
 
