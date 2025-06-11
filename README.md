@@ -37,7 +37,36 @@ https://night-x.com/projects/
 
 Follow for more exploits, Exploit-Master122 🙂 =-D
 Thanks to ultraviolet dev for proxy server.
-  
+
+  # BEST VERSION!!
+  [Darrkon v7](https://exploit-master122.github.io/Darrkonv7/)
+
+- ***UPDATES:***
+- Better UI.
+- Better Browser
+- Credits to [Szvy](https://github.com/szvy)
+- Tab cloaking and favicons.
+- Movies unblocked.
+- Settings tab.
+- Sleek tabs.
+
+
+
+
+# ***COMING SOON***
+- A better version of Darrkon,with...
+- Music and Spotify unblocked.
+- About:blank cloaking
+- Cooler UI.
+- Particle animation.
+- Better password protector.
+- Apps tab for direct bypass.
+- In-Proxy games tab.
+- Links of proxies
+- Discord server for Darrkon.
+- Downloadable file.
+- VM file.
+- ***AND MUCH MORE!!***
 
 
 
