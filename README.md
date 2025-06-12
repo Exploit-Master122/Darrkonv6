@@ -78,6 +78,8 @@ Thanks to ultraviolet dev for proxy server.
 - Credits to [DingusChan](https://github.com/dinguschan-owo) for the HTML-based Helios Browser,the button that I added.Thanks to him for this collab!
 - Credits to [Titanium Network](https://github.com/titaniumnetwork-dev) for the Ultraviolet server that I based it on! They are an amazing group,working tirelessly for an internet where there is freedom and no restrictions.
 - Credits to the [Vapor Network](https://vapor.my) for the inspiration.Lots more is coming soon!!
+- Credits to [Waves Network](https://posiedonissocool.global.ssl.fastly.net/) for the Proxy!
+- Credits to [Waves Network v3](https://waveslookreallycoolintheoceanyouknowbwahahlol.global.ssl.fastly.net/) for the unblocked Movies...
 
 
 
