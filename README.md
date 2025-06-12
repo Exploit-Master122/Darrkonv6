@@ -42,17 +42,19 @@ Thanks to ultraviolet dev for proxy server.
   [Darrkon v7](https://exploit-master122.github.io/Darrkonv7/)
   [Darrkon v7 (Second Link)](https://exploit-master122.github.io/Darrkon/)
 
-- ***UPDATES:***
+- # ***UPDATES:***
 - Better UI.
 - Better Browser
-- Credits to [Szvy](https://github.com/szvy)
 - Tab cloaking and favicons.
 - Movies unblocked.
 - Settings tab.
 - Sleek tabs.
+- Szvy Central proxy added.
+- Helios Browser added.
+- Waves proxy added!
+- More games from Freezenova.
 
-
-
+<p> <dev>
 
 # ***COMING SOON***
 - A better version of Darrkon,with...
@@ -69,9 +71,13 @@ Thanks to ultraviolet dev for proxy server.
 - VM file.
 - ***AND MUCH MORE!!***
 
+<p> <dev>
 
-
-
+# ***CREDITS***
+- Credits to [Szvy](https://github.com/szvy) for Szvy Central source code,a famous proxy! Follow her!
+- Credits to [DingusChan](https://github.com/dinguschan-owo) for the HTML-based Helios Browser,the button that I added.Thanks to him for this collab!
+- Credits to [Titanium Network](https://github.com/titaniumnetwork-dev) for the Ultraviolet server that I based it on! They are an amazing group,working tirelessly for an internet where there is freedom and no restrictions.
+- Credits to the [Vapor Network](https://vapor.my) for the inspiration.Lots more is coming soon!!
 
 
 
