@@ -40,6 +40,7 @@ Thanks to ultraviolet dev for proxy server.
 
   # BEST VERSION!!
   [Darrkon v7](https://exploit-master122.github.io/Darrkonv7/)
+  [Darrkon v7 (Second Link)](https://exploit-master122.github.io/Darrkon/)
 
 - ***UPDATES:***
 - Better UI.
