@@ -189,11 +189,13 @@
   <!-- Top Tab Bar -->
   <div class="topbar" id="topbar" style="display: none;">
     <button class="tabBtn active" onclick="showTab('homeTab', this)">Home</button>
-    <button class="tabBtn" onclick="showTab('gamesTab', this)">Games</button>
+    <button class="tabBtn" onclick="showTab('gamesTab', this)">Links</button>
     <button class="tabBtn" onclick="showTab('browserTab', this)">Browser</button>
     <button class="tabBtn" onclick="showTab('proxyTab', this)">Proxy</button>
     <button class="tabBtn" onclick="showTab('moviesTab', this)">Movies</button>
     <button class="tabBtn" onclick="showTab('settingsTab', this)">Settings</button>
+    <button class="tabBtn" onclick="showTab('gamesLaunchTab', this)">Games</button>
+
   </div>
 
   <!-- Tabs -->
@@ -266,6 +268,21 @@
       <div class="btn-container">
         <button class="btn" onclick="loadMovieSite('https://9anime.to')">9anime</button>
         <button class="btn" onclick="loadMovieSite('https://movies.waves.lat')">Waves Encrypted Movies</button>
+      </div>
+      <div id="movieFrameContainer" style="margin-top: 20px; width: 100%;">
+        <iframe id="movieFrame" style="width: 100%; height: 80vh; border: none;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Games tab!! -->
+  <div class="tab-content" id="gamesLaunchTab">
+    <div class="container">
+      <div class="header">Launch the Games!!</div>
+      <div class="btn-container">
+        <a href="https://schoolwork6thgrade.w3spaces.com/index.html">Nova Online play</a><br>
+        <a href="https://posiedonissocool.global.ssl.fastly.net/g">Waves Encrypted Games</a>
+
       </div>
       <div id="movieFrameContainer" style="margin-top: 20px; width: 100%;">
         <iframe id="movieFrame" style="width: 100%; height: 80vh; border: none;"></iframe>
@@ -407,4 +424,3 @@
   </script>
 </body>
 </html>
-
