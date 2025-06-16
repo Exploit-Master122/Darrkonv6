@@ -80,6 +80,7 @@ Thanks to ultraviolet dev for proxy server.
 - Credits to the [Vapor Network](https://vapor.my) for the inspiration.Lots more is coming soon!!
 - Credits to [Waves Network](https://posiedonissocool.global.ssl.fastly.net/) for the Proxy!
 - Credits to [Waves Network v3](https://waveslookreallycoolintheoceanyouknowbwahahlol.global.ssl.fastly.net/) for the unblocked Movies...
+- Credits to [Vidora.su](https://pleaseifinishedallmyhomeworkcaniwatchtv.global.ssl.fastly.net/) For the iframe embedding and the extra movies.
 
 
 
