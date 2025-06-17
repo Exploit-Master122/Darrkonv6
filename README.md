@@ -3,6 +3,10 @@ Please star if you fork or tweak the code!
 ***LINKS:***
 Before we get to the links part,there is a password saver.Go to the files in password.html to see.Also,for the Helios.html file,I give a lot of credit to Dinguschan-OwO on Github.***DOWNLOAD ALL THE FILES!! THEY WORK WELL!***
 
+
+***THISIS THE MOST RAW TERRIBLE VERSION THERE IS I PUT IT IN AS A JOKE***
+[Please don't click this!](https://2425834.playcode.io/)
+
 (Raw,Basic version): v1:
 ```
 https://totallyschoolwork.playcode.io/
