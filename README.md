@@ -34,13 +34,12 @@ https://night-x.com/projects/
 - https://exploit-master122.github.io/Darrkon-v4/
 - https://exploit-master122.github.io/Darrkonv5/
 - https://darrkonv4.playcode.io/
+- [Darrkon v7](https://exploit-master122.github.io/Darrkonv7/)
+- [Darrkon v7 (Second Link)](https://exploit-master122.github.io/Darrkon/)
 
 Follow for more exploits, Exploit-Master122 🙂 =-D
 Thanks to ultraviolet dev for proxy server.
-
-  # BEST VERSION!!
-  [Darrkon v7](https://exploit-master122.github.io/Darrkonv7/)
-  [Darrkon v7 (Second Link)](https://exploit-master122.github.io/Darrkon/)
+ [Darrkon v8](https://darrkonrules.playcode.io/)
 
 - # ***UPDATES:***
 - Better UI.
