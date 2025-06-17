@@ -70,6 +70,12 @@ Thanks to ultraviolet dev for proxy server.
 - VM file.
 - ***AND MUCH MORE!!***
 
+# BEST LINK,BEST VERSIONS!
+[Darrkon BEST](https://schoolwork6thgrade.w3spaces.com/index.html)
+[Darrkon BEST](https://exploit-master122.github.io/DarrkonOS/)
+[Darrkon BEST](https://darrkonrules.playcode.io/)
+
+
 <p> <dev>
 
 # ***CREDITS***
