@@ -8,7 +8,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(ellipse at bottom, #1b0036, #000);
+      background: radial-gradient(ellipse at bottom, #060018, #000);
       overflow: hidden;
       font-family: 'Segoe UI', sans-serif;
       color: #fff;
@@ -33,12 +33,12 @@
       font-size: 3em;
       font-weight: bold;
       color: white;
-      text-shadow: 0 0 25px #c87fff;
+      text-shadow: 0 0 25px #ff4c4c;
     }
 
     .highlight {
-      color: #d877ff;
-      text-shadow: 0 0 35px #d877ff;
+      color: #ff4c4c;
+      text-shadow: 0 0 35px #ff4c4c;
     }
 
     p {
@@ -48,8 +48,8 @@
     }
 
     .launch-btn {
-      background: rgba(216, 119, 255, 0.1);
-      border: 1px solid #d877ff;
+      background: rgba(255, 76, 76, 0.1);
+      border: 1px solid #ff4c4c;
       padding: 12px 28px;
       border-radius: 30px;
       color: #fff;
@@ -58,48 +58,120 @@
       cursor: pointer;
       backdrop-filter: blur(10px);
       transition: all 0.3s ease;
-      box-shadow: 0 0 20px #d877ff80;
+      box-shadow: 0 0 20px #ff4c4c80;
     }
 
     .launch-btn:hover {
-      background: #d877ff;
+      background: #ff4c4c;
       color: #000;
       transform: scale(1.05);
-      box-shadow: 0 0 30px #d877ff;
+      box-shadow: 0 0 30px #ff4c4c;
+    }
+
+    #password-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to bottom right, #0b001f, #000);
+      padding: 40px;
+      border-radius: 16px;
+      z-index: 10;
+      box-shadow: 0 0 30px #ff4c4c80;
+      border: 1px solid #ff4c4c;
+    }
+
+    #password-container h2 {
+      margin-bottom: 20px;
+      color: #ff4c4c;
+      text-shadow: 0 0 20px #ff4c4c;
+    }
+
+    #password-container input {
+      padding: 12px;
+      font-size: 1em;
+      border: 1px solid #ff4c4c;
+      border-radius: 10px;
+      background: #060018;
+      color: #fff;
+      width: 250px;
+      text-align: center;
+      outline: none;
+      box-shadow: 0 0 15px #ff4c4c20;
+    }
+
+    #password-container button {
+      margin-top: 15px;
+      padding: 10px 24px;
+      font-size: 1em;
+      background: #ff4c4c;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 25px #ff4c4c;
     }
   </style>
 </head>
 <body>
-  <canvas id="stars"></canvas>
+  <div id="password-container">
+    <h2>🔒 Enter Password</h2>
+    <input type="password" id="passwordInput" placeholder="Well...What is it?" />
+    <br />
+    <button onclick="checkPassword()">Login</button>
+  </div>
 
-  <div class="center">
-    <h1>Behold!! <span class="highlight">Darrkon</span></h1>
-    <p>A proxy built for students and durability...</p>
-    <button class="launch-btn" onclick="launchDarrkon()">Launch</button>
+  <canvas id="stars" style="display:none;"></canvas>
+
+  <div class="center" id="mainContent" style="display:none;">
+    <h1>Behold!! <span class="highlight">DarrkonOS</span></h1>
+    <p>A simple web proxy,built for students.</p>
+    <button class="launch-btn" onclick="launchDarrkon()">Deploy</button>
   </div>
 
   <script>
+    window.onbeforeunload = function () {
+      return "Leave site? The teachers are trying to close this tab!";
+    };
+
+    function checkPassword() {
+      const pw = document.getElementById("passwordInput").value;
+      if (pw === "5084820933") {
+        document.getElementById("password-container").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+        document.getElementById("stars").style.display = "block";
+        startStars();
+      } else {
+        alert("Incorrect password.");
+      }
+    }
+
     function launchDarrkon() {
       const win = window.open();
       const content = `
         <!DOCTYPE html>
         <html>
-          <head>
-            <title>Classes</title>
-            <style>
-              html, body { margin: 0; height: 100%; overflow: hidden; }
-              iframe { width: 100%; height: 100%; border: none; }
-            </style>
-          </head>
-          <body>
-            <iframe src="https://exploit-master122.github.io/Darrkon/" allowfullscreen></iframe>
-          </body>
+        <head>
+          <title>Classes</title>
+          <style>
+            html, body { margin: 0; height: 100%; overflow: hidden; }
+            iframe { width: 100%; height: 100%; border: none; }
+          </style>
+        </head>
+        <body>
+          <script>
+            window.onbeforeunload = function () {
+              return "Leave site? Changes you made may not be saved.";
+            };
+          <\/script>
+          <iframe src="https://exploit-master122.github.io/DarrkonOS/" allowfullscreen></iframe>
+        </body>
         </html>`;
       win.document.write(content);
       win.document.close();
     }
 
-    // Star background
     const canvas = document.getElementById("stars");
     const ctx = canvas.getContext("2d");
     let stars = [], numStars = 300;
@@ -110,16 +182,6 @@
     }
 
     window.addEventListener("resize", resize);
-    resize();
-
-    for (let i = 0; i < numStars; i++) {
-      stars.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius: Math.random() * 1.5,
-        velocity: Math.random() * 0.3 + 0.1
-      });
-    }
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -136,7 +198,26 @@
       });
       requestAnimationFrame(animate);
     }
-    animate();
+
+    for (let i = 0; i < numStars; i++) {
+      stars.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        radius: Math.random() * 1.5,
+        velocity: Math.random() * 0.3 + 0.1
+      });
+    }
+
+    function startStars() {
+      resize();
+      animate();
+    }
+
+    document.getElementById("passwordInput").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        checkPassword();
+      }
+    });
   </script>
 </body>
 </html>
