@@ -7,6 +7,8 @@
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.1.0/tsparticles.bundle.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"/>
   <style>
+    /* === No way this site beats Opera GX lol === */
+
     * {
       margin: 0;
       padding: 0;
@@ -24,41 +26,51 @@
     }
 
     body {
-      background-color: #111;
-      color: #fff;
+      background: linear-gradient(135deg, #1a1a1a 0%, #120000 100%);
+      color: #e0e0e0;
       height: 100vh;
       overflow-x: hidden;
+      user-select: none;
     }
 
     .topbar {
       width: 100%;
       display: flex;
       justify-content: center;
-      background-color: #1e1e1e;
-      box-shadow: 0 2px 5px #000;
-      padding: 10px 0;
+      background: linear-gradient(90deg, #330000, #660000);
+      box-shadow: 0 0 20px #ff0000cc;
+      padding: 12px 0;
       position: sticky;
       top: 0;
       z-index: 999;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 6px;
+      border-bottom: 2px solid #ff1a1a;
+      font-weight: 600;
+      letter-spacing: 0.04em;
     }
 
     .topbar button {
       background: transparent;
-      border: none;
-      color: #fff;
+      border: 2px solid #ff1a1a;
+      color: #ff4d4d;
       font-size: 16px;
-      padding: 10px 20px;
+      padding: 10px 24px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff1a1a44 inset;
+      font-weight: 600;
+      text-transform: uppercase;
     }
 
     .topbar button:hover,
     .topbar button.active {
-      background: #fff;
-      color: #111;
-      border-radius: 6px;
+      background: #ff1a1a;
+      color: #1a0000;
+      box-shadow: 0 0 20px #ff4d4d;
+      border-color: #ff4d4d;
+      transform: scale(1.05);
     }
 
     .tab-content {
@@ -66,71 +78,113 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 24px 20px;
+      transition: opacity 0.3s ease;
     }
 
     .tab-content.active {
       display: flex;
+      opacity: 1;
     }
 
     .container, .auth-container {
-      background: #1e1e1e;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 30px #aaa;
+      background: #2a0000;
+      padding: 36px 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 30px #ff1a1acc;
       text-align: center;
       width: 90%;
       max-width: 600px;
+      border: 2px solid #ff4d4d;
+      user-select: text;
     }
 
     input[type="text"],
     input[type="password"] {
       width: 100%;
-      padding: 10px;
-      margin: 20px 0;
+      padding: 14px 16px;
+      margin: 24px 0;
       border: none;
-      border-radius: 6px;
+      border-radius: 12px;
       font-size: 16px;
+      background: #3f0000;
+      color: #ffcccc;
+      box-shadow: inset 0 0 8px #ff1a1a99;
+      transition: background 0.3s ease;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: #ff6666aa;
+      font-style: italic;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      background: #510000;
+      box-shadow: 0 0 12px #ff1a1aee;
+      color: #fff;
     }
 
     .btn-container {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
+      gap: 14px;
+      margin-top: 28px;
     }
 
     .btn {
       background: transparent;
-      border: 1px solid #fff;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 6px;
+      border: 2px solid #ff1a1a;
+      color: #ff4d4d;
+      padding: 12px 28px;
+      border-radius: 14px;
       cursor: pointer;
+      font-weight: 700;
+      font-size: 15px;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px #ff1a1a44 inset;
       transition: all 0.3s ease;
+      user-select: none;
     }
 
     .btn:hover {
-      background: #fff;
-      color: #111;
+      background: #ff1a1a;
+      color: #330000;
+      box-shadow: 0 0 25px #ff4d4d;
+      transform: scale(1.08);
     }
 
     .header {
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 28px;
+      margin-bottom: 14px;
+      color: #ff3333;
+      text-shadow: 0 0 8px #ff0000;
+      font-weight: 900;
+      letter-spacing: 0.05em;
     }
 
     .subheader {
-      font-size: 14px;
-      color: #aaa;
+      font-size: 16px;
+      color: #ff9999cc;
+      margin-bottom: 24px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      user-select: text;
     }
 
     iframe {
       width: 100%;
       height: 80vh;
-      margin-top: 20px;
+      margin-top: 24px;
       border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff1a1abb;
+      background-color: #1a0000;
     }
 
     ul {
@@ -140,23 +194,28 @@
       max-width: 600px;
       margin: 10px auto 0 auto;
       text-align: left;
+      user-select: text;
     }
 
     ul li a {
-      color: #00f7ff;
+      color: #ff4d4d;
       text-decoration: none;
       display: block;
-      padding: 5px 0;
+      padding: 8px 0;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      border-bottom: 1px solid #330000;
     }
 
     ul li a:hover {
+      color: #ff9999;
       text-decoration: underline;
     }
 
     hr {
       border: none;
-      border-top: 1px solid #444;
-      margin: 20px 0;
+      border-top: 1px solid #550000;
+      margin: 24px 0;
       width: 100%;
       max-width: 600px;
     }
@@ -195,7 +254,6 @@
     <button class="tabBtn" onclick="showTab('moviesTab', this)">Movies</button>
     <button class="tabBtn" onclick="showTab('settingsTab', this)">Settings</button>
     <button class="tabBtn" onclick="showTab('gamesLaunchTab', this)">Games</button>
-
   </div>
 
   <!-- Tabs -->
@@ -226,48 +284,46 @@
         <li><a href="https://6aprdwx4pk.jellyfl1x.es/" target="_blank">Moonlight (Untested)</a></li>
         <li><a href="https://englishwork4school.mka.in/" target="_blank">SVY Central</a></li>
         <li><a href="https://oil.radicalnetworks.org/" target="_blank">Emerald</a></li>
-        <li><a href="https://phantomgames.dev/" target="_blank">PhantomGames (Blocked Games)</a></li>
+        <li><a href="https://ifyoublockthisiwillstabyou.global.ssl.fastly.net/" target="_blank">Now.gg</a></li>
         <li><a href="https://hexcein-moonsters.github.io/polytrack/" target="_blank">PolyTrack Unblocked</a></li>
         <li><a href="https://www.hoodamath.com/games/run.html#gsc.tab=0" target="_blank">Unblocked Games!</a></li>
+        <li><a href="https://github.com/Exploit-Master122/Vex1" target="_blank">Vex1 Games</a></li>
+        <li><a href="https://github.com/Exploit-Master122/Somethingweird" target="_blank">MORE LINKS!!!!! (BEST)</a></li>
+
+
       </ul>
     </div>
   </div>
 
   <div class="tab-content" id="browserTab">
     <div class="container">
-      <div class="header">Embedded Browser</div>
-      <input type="text" id="urlInput" placeholder="Enter URL or Search Query" />
+      <div class="header">Unblocked Browser!</div>
+      <input type="text" id="urlInput" placeholder="Enter URL or Search Qwant/WebCrawl3r" />
       <div class="btn-container">
-        <button class="btn" onclick="launchProxy('iframe')">Iframe</button>
+        <button class="btn" onclick="launchProxy('iframe')">Ulraviolet (Best)</button>
         <button class="btn" onclick="launchProxy('helios')">Helios</button>
-        <button class="btn" onclick="launchProxy('blob')">Blob</button>
+        <button class="btn" onclick="launchProxy('blob')">Blob Launch</button>
         <button class="btn" onclick="launchDataCloak()">Data Cloak</button>
-        <button class="btn" onclick="launchKahoot()">Kahoot Proxy</button>
+        <button class="btn" onclick="launchKahoot()">Szvy Loader</button>
       </div>
       <div id="output"></div>
     </div>
   </div>
 
-  <div class="tab-content" id="proxyTab">
-    <div class="container">
-      <div class="header">Quick Cloaking</div>
-      <div class="btn-container">
-        <button class="btn" onclick="document.title='Google Docs'">Google Docs</button>
-        <button class="btn" onclick="document.title='Classroom'">Classroom</button>
-        <button class="btn" onclick="document.title='Home'">Home</button>
-        <button class="btn" onclick="document.title='Creekside PL Time'">Creekside PL Time</button>
-        <button class="btn" onclick="document.title='New Tab'">New Tab</button>
-      </div>
-    </div>
-  </div>
+
 
   <!-- Movies Tab -->
   <div class="tab-content" id="moviesTab">
     <div class="container">
-      <div class="header">Watch Movies</div>
+      <div class="header">Watch Movies!</div>
       <div class="btn-container">
-        <button class="btn" onclick="loadMovieSite('https://9anime.to')">9anime</button>
+        <button class="btn" onclick="loadMovieSite('https://watch.vidora.su')">Vidora Entertainment</button>
         <button class="btn" onclick="loadMovieSite('https://movies.waves.lat')">Waves Encrypted Movies</button>
+        <button class="btn" onclick="loadMovieSite('https://condensationinvaporisverycoolforcience.global.ssl.fastly.net/')">Vapor Network TV.</button>
+        <button class="btn" onclick="loadMovieSite('https://pluto.tv/')">Pluto Television...</button>
+
+
+        Load the pop ups if the iframe does not go fullscreen.For the vapor one (Which I reccomend) go to the TV or Movies section and then launch the pop ups.They are unblocked by default.Try the vidora one,too that one is good.Credits to Orbit Network TV.
       </div>
       <div id="movieFrameContainer" style="margin-top: 20px; width: 100%;">
         <iframe id="movieFrame" style="width: 100%; height: 80vh; border: none;"></iframe>
@@ -280,147 +336,161 @@
     <div class="container">
       <div class="header">Launch the Games!!</div>
       <div class="btn-container">
-        <a href="https://schoolwork6thgrade.w3spaces.com/index.html">Nova Online play</a><br>
-        <a href="https://posiedonissocool.global.ssl.fastly.net/g">Waves Encrypted Games</a>
+        <a href="https://unblocked-games.s3.amazonaws.com/index.html">Nova Online Play</a><br>
+        <a href="https://posiedonissocool.global.ssl.fastly.net/">Waves Entertainment</a><br>
+        <a href="https://pokiio.github.io/">Poki Github io</a><br>
+        <a href="https://www.crazygames.nl/">Crazygames (Dutch)</a><br>
+        If the links are blocked,put them in the browser,and for some reason the crazygames website is entirely in dutch.It should work,though,especially the Nova Games.Fullscreen will be implemented soon,don't worry.
 
-      </div>
-      <div id="movieFrameContainer" style="margin-top: 20px; width: 100%;">
-        <iframe id="movieFrame" style="width: 100%; height: 80vh; border: none;"></iframe>
+
+
       </div>
     </div>
   </div>
 
-  <!-- Settings Tab with Quick Cloaking moved here -->
-  <div class="tab-content" id="settingsTab">
-    <div class="container">
-      <div class="header">Settings</div>
-      <div class="subheader">More coming soon...</div>
-      <hr />
-      <div class="header" style="font-size: 20px;">Quick Cloaking</div>
-      <div class="btn-container">
-        <button class="btn" onclick="document.title='Google Docs'">Google Docs</button>
-        <button class="btn" onclick="document.title='Classroom'">Classroom</button>
-        <button class="btn" onclick="document.title='Home'">Home</button>
-        <button class="btn" onclick="document.title='Creekside PL Time'">Creekside PL Time</button>
-        <button class="btn" onclick="document.title='New Tab'">New Tab</button>
-      </div>
+  <!-- Settings Tab -->
+<div class="tab-content" id="settingsTab">
+  <div class="container">
+    <div class="header">Settings</div>
+    
+    <!-- Logout & Reset -->
+    <div class="btn-container">
+      <button class="btn" onclick="clearAuth()">Log out</button>
+      <button class="btn" onclick="resetAll()">Delete Search Data</button>
+    </div>
+
+    <!-- Quick Cloaking -->
+    <div class="header" style="margin-top: 20px;">Quick Cloaking</div>
+    <div class="btn-container">
+      <button class="btn" onclick="document.title='Google Docs'">Google Docs</button>
+      <button class="btn" onclick="document.title='Classroom'">Classroom</button>
+      <button class="btn" onclick="document.title='Home'">Home</button>
+      <button class="btn" onclick="document.title='Creekside PL Time'">Creekside PL Time</button>
+      <button class="btn" onclick="document.title='New Tab'">New Tab</button>
+      <button class="btn" onclick="document.title='New Tab'">Tinkercad Dashboard</button>
+      Join the discord for more links,updates,web dev,and more! [Discord](https://discord.gg/fWcUWqCy)
     </div>
   </div>
-  <script>
-    const correctPassword = "5084820933";
+</div>
 
-    function checkPassword() {
-      const input = document.getElementById("passwordInput").value;
-      if (input === correctPassword) {
-        document.getElementById("authContainer").style.display = "none";
-        document.getElementById("topbar").style.display = "flex";
-      } else {
-        alert("Incorrect password!");
-      }
-    }
 
-    function showTab(tabId, el) {
-      // Accept event element or button itself
-      const btns = document.querySelectorAll(".topbar button");
-      btns.forEach(btn => btn.classList.remove("active"));
-      el.classList.add("active");
-
-      const tabs = document.querySelectorAll(".tab-content");
-      tabs.forEach(tab => tab.classList.remove("active"));
-      const tab = document.getElementById(tabId);
-      if (tab) tab.classList.add("active");
-    }
-
-    function launchProxy(type) {
-      const urlInput = document.getElementById("urlInput").value.trim();
-      let url;
-
-      if (!urlInput) {
-        alert("Please enter a URL or search query.");
-        return;
-      }
-
-      // If input does not look like URL, treat it as search query
-      if (!urlInput.match(/^https?:\/\//)) {
-        url = "https://www.google.com/search?q=" + encodeURIComponent(urlInput);
-      } else {
-        url = urlInput;
-      }
-
-      const output = document.getElementById("output");
-      output.innerHTML = "";
-
-      if (type === "iframe") {
-        const iframe = document.createElement("iframe");
-        iframe.src = url;
-        iframe.style.width = "100%";
-        iframe.style.height = "80vh";
-        iframe.style.border = "none";
-        output.appendChild(iframe);
-      } else if (type === "helios") {
-        const heliosUrl = "https://helios-browser.rf.gd/?i=1" + encodeURIComponent(url);
-        window.open(heliosUrl, "_blank");
-      } else if (type === "blob") {
-        const blobUrl = "https://blob.unblocker.site/?url=" + encodeURIComponent(url);
-        window.open(blobUrl, "_blank");
-      }
-    }
-
-    function launchDataCloak() {
-      alert("Data Cloak launched! (Functionality to be implemented)");
-    }
-
-    function launchKahoot() {
-      const kahootUrl = "https://kahoot.com.de";
-      window.open(kahootUrl, "_blank");
-    }
-
-    // Movies tab function
-    function loadMovieSite(url) {
-      const iframe = document.getElementById("movieFrame");
-      iframe.src = url;
-    }
-
-    // Initialize particles
-    tsParticles.load("tsparticles", {
-      fpsLimit: 60,
-      interactivity: {
-        detectsOn: "canvas",
-        events: {
-          onClick: { enable: true, mode: "push" },
-          onHover: { enable: true, mode: "repulse" },
-          resize: true
-        },
-        modes: {
-          push: { quantity: 4 },
-          repulse: { distance: 100, duration: 0.4 }
-        }
-      },
-      particles: {
-        color: { value: "#00f7ff" },
-        links: {
-          color: "#00f7ff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1
-        },
-        collisions: { enable: true },
-        move: {
-          direction: "none",
-          enable: true,
-          outModes: { default: "bounce" },
-          random: false,
-          speed: 1,
-          straight: false
-        },
-        number: { density: { enable: true, area: 800 }, value: 60 },
-        opacity: { value: 0.5 },
-        shape: { type: "circle" },
-        size: { value: { min: 1, max: 3 } }
-      },
-      detectRetina: true
+<script>
+  function showTab(tabId, btn) {
+    document.querySelectorAll('.tab-content').forEach(tc => {
+      tc.classList.remove('active');
     });
-  </script>
+    document.querySelectorAll('.tabBtn').forEach(b => {
+      b.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function checkPassword() {
+    const pw = document.getElementById('passwordInput').value;
+    if (pw === '5084820933') {
+      document.getElementById('authContainer').style.display = 'none';
+      document.getElementById('topbar').style.display = 'flex';
+    } else {
+      alert('Wrong password');
+    }
+  }
+
+  function clearAuth() {
+    document.getElementById('authContainer').style.display = 'block';
+    document.getElementById('topbar').style.display = 'none';
+    document.getElementById('passwordInput').value = '';
+  }
+
+  function resetAll() {
+    location.reload();
+  }
+
+  // ✅ FIXED launchProxy function!!
+  function launchProxy(type) {
+    const url = document.getElementById('urlInput').value.trim();
+    if (!url) {
+      alert('Please enter a URL or search query');
+      return;
+    }
+    const output = document.getElementById('output');
+    output.innerHTML = '';
+    if (type === 'iframe') {
+      const iframe = document.createElement('iframe');
+      iframe.src = url.startsWith('http') ? url : 'https://www.webcrawler.com/?q=' + encodeURIComponent(url);
+      iframe.style.width = '100%';
+      iframe.style.height = '60vh';
+      iframe.style.border = 'none';
+      output.appendChild(iframe);
+    } else if (type === 'helios') {
+      const iframe = document.createElement('iframe');
+      iframe.src = "https://helios-browser.rf.gd/";
+      iframe.style.width = '100%';
+      iframe.style.height = '60vh';
+      iframe.style.border = 'none';
+      output.appendChild(iframe);
+    } else if (type === 'blob') {
+      const iframe = document.createElement('iframe');
+      iframe.src = `blobproxy.html?url=${encodeURIComponent(url)}`;
+      iframe.style.width = '100%';
+      iframe.style.height = '60vh';
+      iframe.style.border = 'none';
+      output.appendChild(iframe);
+    }
+  }
+
+  function launchDataCloak() {
+    alert('Data Cloak feature coming soon!');
+  }
+
+  function launchKahoot() {
+    alert('Go to https://kahoot.com.de');
+  }
+
+  function loadMovieSite(url) {
+    document.getElementById('movieFrame').src = url;
+  }
+
+  // tsparticles config for background effect
+  tsParticles.load("tsparticles", {
+    fpsLimit: 60,
+    interactivity: {
+      detectsOn: "canvas",
+      events: {
+        onHover: { enable: true, mode: "repulse" },
+        onClick: { enable: true, mode: "push" },
+        resize: true
+      },
+      modes: {
+        repulse: { distance: 100, duration: 0.4 },
+        push: { quantity: 4 }
+      }
+    },
+    particles: {
+      color: { value: "#ff1a1a" },
+      links: {
+        color: "#ff0000",
+        distance: 120,
+        enable: true,
+        opacity: 0.5,
+        width: 2
+      },
+      collisions: { enable: true },
+      move: {
+        direction: "none",
+        enable: true,
+        outMode: "bounce",
+        random: false,
+        speed: 2,
+        straight: false
+      },
+      number: { density: { enable: true, area: 800 }, value: 50 },
+      opacity: { value: 0.6 },
+      shape: { type: "circle" },
+      size: { random: true, value: 5 }
+    },
+    detectRetina: true
+  });
+</script>
 </body>
 </html>
