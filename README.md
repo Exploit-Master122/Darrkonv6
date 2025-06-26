@@ -92,6 +92,8 @@ Thanks to ultraviolet dev for proxy server.
 - Credits to [Vidora.su](https://pleaseifinishedallmyhomeworkcaniwatchtv.global.ssl.fastly.net/) For the iframe embedding and the extra movies.
 
 
+# All fastly deployment links are down due to the summer and costs.
+
 
 
 
