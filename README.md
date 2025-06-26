@@ -92,7 +92,7 @@ Thanks to ultraviolet dev for proxy server.
 - Credits to [Vidora.su](https://pleaseifinishedallmyhomeworkcaniwatchtv.global.ssl.fastly.net/) For the iframe embedding and the extra movies.
 
 
-# ***All fastly deployment links are down due to the summer and costs.Domains don't grow on trees.I'll try and get them back up in August,which is my brithday,but also the release of DARRKON v6,the latest version***
+# ***All fastly deployment links are down due to the summer and costs.Domains don't grow on trees.I'll try and get them back up in August,which is my brithday,but also the release of DARRKON v6,the latest version! =-D***
 
 
 
