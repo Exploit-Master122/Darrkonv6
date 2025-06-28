@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title> <!-- Cloaked title -->
+  <link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png" type="image/png"> <!-- Cloaked favicon -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0b1a4d, #153a8a); /* DARKER BLUE */
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+    .container {
+      text-align: center;
+      background-color: rgba(0, 0, 50, 0.4);
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 300px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2563eb;
+      color: white;
+      cursor: pointer;
+    }
+    iframe {
+      width: 95vw;
+      height: 70vh;
+      margin-top: 20px;
+      border: 2px solid #ffffff55;
+      border-radius: 10px;
+    }
+    .changelog {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      max-width: 600px;
+    }
+    a { color: #90cdf4; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Darrkon Browser v3</h1>
+    <p>By <a href="https://github.com/Exploit-Master122" target="_blank">Exploit-Master122</a></p>
+
+    <input type="text" id="url" placeholder="Enter URL (https://)">
+    <br>
+    <button id="renderBtn">Render</button>
+    <button id="blankBtn">about:blank</button>
+    <button id="blobBtn">blob:</button>
+    <button id="fullscreenBtn">Fullscreen</button>
+    <br>
+    <iframe id="viewer" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+
+    <div class="changelog">
+      <h3>Changelog</h3>
+      <ul id="log">
+        <li>v3.1 — Added fullscreen button + Google Classroom cloaking</li>
+        <li>v3 — Initial release with working proxy & cloaking</li>
+        <li>One of the WORST versions lol,but at least the proxy works...</li>
+        <li>https://helios-browser.rf.gd</li>
+        <!-- Add your updates below -->
+      </ul>
+    </div>
+  </div>
+
+  <script defer>
+    window.addEventListener("DOMContentLoaded", () => {
+      const proxyBase = "https://corsproxy.io/?"; // Most reliable current CORS proxy
+
+      const renderBtn = document.getElementById("renderBtn");
+      const blankBtn = document.getElementById("blankBtn");
+      const blobBtn = document.getElementById("blobBtn");
+      const fullscreenBtn = document.getElementById("fullscreenBtn");
+      const urlInput = document.getElementById("url");
+      const viewer = document.getElementById("viewer");
+
+      renderBtn.onclick = async () => {
+        const rawUrl = urlInput.value.trim();
+        if (!rawUrl) return;
+        const url = rawUrl.startsWith("http") ? rawUrl : `https://${rawUrl}`;
+
+        try {
+          const response = await fetch(proxyBase + encodeURIComponent(url));
+          const html = await response.text();
+
+          // Clean up previous blob URL to avoid memory leaks
+          if (viewer.src.startsWith("blob:")) {
+            URL.revokeObjectURL(viewer.src);
+          }
+
+          const blob = new Blob([html], { type: "text/html" });
+          const blobUrl = URL.createObjectURL(blob);
+          viewer.src = blobUrl;
+        } catch (err) {
+          viewer.srcdoc = `<h2 style="color:red;">Error Loading Page:</h2><pre>${err.message}</pre>`;
+        }
+      };
+
+      blankBtn.onclick = () => {
+        window.open("about:blank", "_blank");
+      };
+
+      blobBtn.onclick = () => {
+        const html = `<script>location='${urlInput.value.trim()}'<\/script>`;
+        const blob = new Blob([html], { type: "text/html" });
+        const blobUrl = URL.createObjectURL(blob);
+        window.open(blobUrl);
+      };
+
+      fullscreenBtn.onclick = () => {
+        const elem = viewer; // Make the iframe fullscreen, not the whole document
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else {
+          elem.requestFullscreen().catch(err => {
+            alert(`Fullscreen error: ${err.message}`);
+          });
+        }
+      };
+    });
+  </script>
+</body>
+</html>
