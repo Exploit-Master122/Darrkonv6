@@ -4,18 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Darrkon</title>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.1.0/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles @3.1.0/tsparticles.bundle.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"/>
   <style>
     /* === No way this site beats Opera GX lol === */
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: "Roboto Mono", monospace;
     }
-
     #tsparticles {
       position: fixed;
       width: 100%;
@@ -24,7 +22,6 @@
       top: 0;
       left: 0;
     }
-
     body {
       background: linear-gradient(135deg, #1a1a1a 0%, #120000 100%);
       color: #e0e0e0;
@@ -32,7 +29,6 @@
       overflow-x: hidden;
       user-select: none;
     }
-
     .topbar {
       width: 100%;
       display: flex;
@@ -49,7 +45,6 @@
       font-weight: 600;
       letter-spacing: 0.04em;
     }
-
     .topbar button {
       background: transparent;
       border: 2px solid #ff1a1a;
@@ -63,7 +58,6 @@
       font-weight: 600;
       text-transform: uppercase;
     }
-
     .topbar button:hover,
     .topbar button.active {
       background: #ff1a1a;
@@ -72,7 +66,6 @@
       border-color: #ff4d4d;
       transform: scale(1.05);
     }
-
     .tab-content {
       display: none;
       flex-direction: column;
@@ -81,12 +74,10 @@
       padding: 24px 20px;
       transition: opacity 0.3s ease;
     }
-
     .tab-content.active {
       display: flex;
       opacity: 1;
     }
-
     .container, .auth-container {
       background: #2a0000;
       padding: 36px 30px;
@@ -98,7 +89,6 @@
       border: 2px solid #ff4d4d;
       user-select: text;
     }
-
     input[type="text"],
     input[type="password"] {
       width: 100%;
@@ -114,13 +104,11 @@
       font-weight: 600;
       letter-spacing: 0.02em;
     }
-
     input[type="text"]::placeholder,
     input[type="password"]::placeholder {
       color: #ff6666aa;
       font-style: italic;
     }
-
     input[type="text"]:focus,
     input[type="password"]:focus {
       outline: none;
@@ -128,7 +116,6 @@
       box-shadow: 0 0 12px #ff1a1aee;
       color: #fff;
     }
-
     .btn-container {
       display: flex;
       justify-content: space-around;
@@ -136,7 +123,6 @@
       gap: 14px;
       margin-top: 28px;
     }
-
     .btn {
       background: transparent;
       border: 2px solid #ff1a1a;
@@ -151,14 +137,12 @@
       transition: all 0.3s ease;
       user-select: none;
     }
-
     .btn:hover {
       background: #ff1a1a;
       color: #330000;
       box-shadow: 0 0 25px #ff4d4d;
       transform: scale(1.08);
     }
-
     .header {
       font-size: 28px;
       margin-bottom: 14px;
@@ -167,7 +151,6 @@
       font-weight: 900;
       letter-spacing: 0.05em;
     }
-
     .subheader {
       font-size: 16px;
       color: #ff9999cc;
@@ -176,17 +159,15 @@
       letter-spacing: 0.02em;
       user-select: text;
     }
-
     iframe {
       width: 100%;
-      height: 80vh;
+      height: 60vh;
       margin-top: 24px;
       border: none;
       border-radius: 12px;
       box-shadow: 0 0 20px #ff1a1abb;
       background-color: #1a0000;
     }
-
     ul {
       list-style: none;
       padding: 0;
@@ -196,7 +177,6 @@
       text-align: left;
       user-select: text;
     }
-
     ul li a {
       color: #ff4d4d;
       text-decoration: none;
@@ -206,12 +186,10 @@
       transition: color 0.3s ease;
       border-bottom: 1px solid #330000;
     }
-
     ul li a:hover {
       color: #ff9999;
       text-decoration: underline;
     }
-
     hr {
       border: none;
       border-top: 1px solid #550000;
@@ -219,7 +197,6 @@
       width: 100%;
       max-width: 600px;
     }
-
     @media (max-width: 600px) {
       .btn-container {
         flex-direction: column;
@@ -236,7 +213,6 @@
 </head>
 <body>
   <div id="tsparticles"></div>
-
   <!-- Auth -->
   <div class="auth-container" id="authContainer">
     <div class="header">Password Protected</div>
@@ -244,19 +220,19 @@
     <input type="password" id="passwordInput" placeholder="Enter Password" />
     <button class="btn" onclick="checkPassword()">Enter</button>
   </div>
-
   <!-- Top Tab Bar -->
   <div class="topbar" id="topbar" style="display: none;">
     <button class="tabBtn active" onclick="showTab('homeTab', this)">Home</button>
     <button class="tabBtn" onclick="showTab('gamesTab', this)">Links</button>
     <button class="tabBtn" onclick="showTab('browserTab', this)">Browser</button>
-    <button class="tabBtn" onclick="showTab('proxyTab', this)">Proxy</button>
+    <button class="tabBtn" onclick="showTab('cloakTab', this)">Cloak</button>
+    <button class="tabBtn" onclick="showTab('toolsTab', this)">Tools</button>
     <button class="tabBtn" onclick="showTab('moviesTab', this)">Movies</button>
     <button class="tabBtn" onclick="showTab('settingsTab', this)">Settings</button>
     <button class="tabBtn" onclick="showTab('gamesLaunchTab', this)">Games</button>
   </div>
 
-  <!-- Tabs -->
+  <!-- Home Tab -->
   <div class="tab-content active" id="homeTab">
     <div class="container">
       <div class="header">Darrkon</div>
@@ -264,37 +240,23 @@
     </div>
   </div>
 
-  <div class="tab-content" id="gamesTab">
-    <div class="container" style="max-height: 80vh; overflow-y: auto;">
-      <div class="header">Games / Proxies</div>
-      <ul>
-        <li><a href="https://us4-z.global.ssl.fastly.net/" target="_blank">US4 Proxy Z</a></li>
-        <li><a href="https://us4-v.global.ssl.fastly.net/" target="_blank">US4 Proxy V</a></li>
-        <li><a href="https://cesium.insviro.com/" target="_blank">Cesium Browser</a></li>
-        <li><a href="https://writingessayepicguide.lol/en_US/" target="_blank">Nebula Browser</a></li>
-        <li><a href="https://msr25s-8080.csb.app/" target="_blank">Nebula (Alt)</a></li>
-        <li><a href="https://travel.kigurun.ru/" target="_blank">DayDreamX</a></li>
-        <li><a href="https://pcbtnghvzx.elliott.ca/" target="_blank">UniUb 1</a></li>
-        <li><a href="https://ogiqbptdki.joemullins.info/" target="_blank">UniUb 2</a></li>
-        <li><a href="https://quietschizophrenia.120v.ac/" target="_blank">UniUb 3</a></li>
-        <li><a href="https://maths.onl/" target="_blank">UniUB WORKING!!</a></li>
-        <li><a href="https://void.ubyis.org/" target="_blank">Void Network</a></li>
-        <li><a href="https://ubgusa.com/" target="_blank">America’s Unbl*cker</a></li>
-        <li><a href="https://vans.webconstructions.co.uk/" target="_blank">CloudBurst Proxy</a></li>
-        <li><a href="https://6aprdwx4pk.jellyfl1x.es/" target="_blank">Moonlight (Untested)</a></li>
-        <li><a href="https://englishwork4school.mka.in/" target="_blank">SVY Central</a></li>
-        <li><a href="https://oil.radicalnetworks.org/" target="_blank">Emerald</a></li>
-        <li><a href="https://ifyoublockthisiwillstabyou.global.ssl.fastly.net/" target="_blank">Now.gg</a></li>
-        <li><a href="https://hexcein-moonsters.github.io/polytrack/" target="_blank">PolyTrack Unblocked</a></li>
-        <li><a href="https://www.hoodamath.com/games/run.html#gsc.tab=0" target="_blank">Unblocked Games!</a></li>
-        <li><a href="https://github.com/Exploit-Master122/Vex1" target="_blank">Vex1 Games</a></li>
-        <li><a href="https://github.com/Exploit-Master122/Somethingweird" target="_blank">MORE LINKS!!!!! (BEST)</a></li>
-
-
-      </ul>
+  <!-- Cloak Tab -->
+  <div class="tab-content" id="cloakTab">
+    <div class="container">
+      <div class="header">Cloaking</div>
+      <button class="btn" onclick="window.open(' https://github.com/Exploit-Master122/Darrkonv6/blob/main/darrkon.html ', '_blank')">Open Cloak Source</button>
     </div>
   </div>
 
+  <!-- Tools Tab -->
+  <div class="tab-content" id="toolsTab">
+    <div class="container">
+      <div class="header">Proxy Tools</div>
+      <button class="btn" onclick="window.open('https://repos.ecosyste.ms/hosts/GitHub/owners/Exploit-Master122 ', '_blank')">Go to Proxy Tools</button>
+    </div>
+  </div>
+
+  <!-- Browser Tab -->
   <div class="tab-content" id="browserTab">
     <div class="container">
       <div class="header">Unblocked Browser!</div>
@@ -305,28 +267,25 @@
         <button class="btn" onclick="launchProxy('blob')">Blob Launch</button>
         <button class="btn" onclick="launchDataCloak()">Data Cloak</button>
         <button class="btn" onclick="launchKahoot()">Szvy Loader</button>
+        <button class="btn" onclick="toggleFullscreen('output')">Fullscreen</button>
       </div>
       <div id="output"></div>
     </div>
   </div>
-
-
 
   <!-- Movies Tab -->
   <div class="tab-content" id="moviesTab">
     <div class="container">
       <div class="header">Watch Movies!</div>
       <div class="btn-container">
-        <button class="btn" onclick="loadMovieSite('https://watch.vidora.su')">Vidora Entertainment</button>
-        <button class="btn" onclick="loadMovieSite('https://movies.waves.lat')">Waves Encrypted Movies</button>
-        <button class="btn" onclick="loadMovieSite('https://condensationinvaporisverycoolforcience.global.ssl.fastly.net/')">Vapor Network TV.</button>
-        <button class="btn" onclick="loadMovieSite('https://pluto.tv/')">Pluto Television...</button>
-
-
-        Load the pop ups if the iframe does not go fullscreen.For the vapor one (Which I reccomend) go to the TV or Movies section and then launch the pop ups.They are unblocked by default.Try the vidora one,too that one is good.Credits to Orbit Network TV.
+        <button class="btn" onclick="loadMovieSite('https://watch.vidora.su ')">Vidora Entertainment</button>
+        <button class="btn" onclick="loadMovieSite('https://movies.waves.lat ')">Waves Encrypted Movies</button>
+        <button class="btn" onclick="loadMovieSite('https://condensationinvaporisverycoolforcience.global.ssl.fastly.net/ ')">Vapor Network TV.</button>
+        <button class="btn" onclick="loadMovieSite('https://pluto.tv/ ')">Pluto Television...</button>
+        <button class="btn" onclick="toggleFullscreen('movieFrame')">Fullscreen</button>
       </div>
       <div id="movieFrameContainer" style="margin-top: 20px; width: 100%;">
-        <iframe id="movieFrame" style="width: 100%; height: 80vh; border: none;"></iframe>
+        <iframe id="movieFrame" style="width: 100%; height: 60vh; border: none;"></iframe>
       </div>
     </div>
   </div>
@@ -336,161 +295,169 @@
     <div class="container">
       <div class="header">Launch the Games!!</div>
       <div class="btn-container">
-        <a href="https://unblocked-games.s3.amazonaws.com/index.html">Nova Online Play</a><br>
-        <a href="https://posiedonissocool.global.ssl.fastly.net/">Waves Entertainment</a><br>
-        <a href="https://pokiio.github.io/">Poki Github io</a><br>
-        <a href="https://www.crazygames.nl/">Crazygames (Dutch)</a><br>
-        If the links are blocked,put them in the browser,and for some reason the crazygames website is entirely in dutch.It should work,though,especially the Nova Games.Fullscreen will be implemented soon,don't worry.
-
-
-
+        <a href="https://unblocked-games.s3.amazonaws.com/index.html ">Nova Online Play</a><br>
+        <a href="https://exploit-master122.github.io/fractions4kids/ ">SZ Games</a><br>
+        <a href="https://exploit-master122.github.io/Time-Shooter-3/ ">Time Shooter 3</a><br>
+        <a href="https://www.crazygames.nl/ ">Crazygames (Dutch)</a><br>
+        <a href="https://hotkitchenbag.com/ ">Roblox (Now.gg)</a><br>
+        <a href="https://exploit-master122.github.io/vex7/ ">Stickman Vex 7</a><br>
+        <a href="https://dinguschan-owo.github.io/dingusproxy/ ">DingusProxy v3</a><br>
+        If the links are blocked,put them in the browser,and for some reason the crazygames website is entirely in dutch.It should work,though,especially the Nova Games.Fullscreen will be implemented soon,don't worry.The now.gg roblox may not work,try a few times,and the github io ones are all unblocked!
       </div>
     </div>
   </div>
 
   <!-- Settings Tab -->
-<div class="tab-content" id="settingsTab">
-  <div class="container">
-    <div class="header">Settings</div>
-    
-    <!-- Logout & Reset -->
-    <div class="btn-container">
-      <button class="btn" onclick="clearAuth()">Log out</button>
-      <button class="btn" onclick="resetAll()">Delete Search Data</button>
-    </div>
-
-    <!-- Quick Cloaking -->
-    <div class="header" style="margin-top: 20px;">Quick Cloaking</div>
-    <div class="btn-container">
-      <button class="btn" onclick="document.title='Google Docs'">Google Docs</button>
-      <button class="btn" onclick="document.title='Classroom'">Classroom</button>
-      <button class="btn" onclick="document.title='Home'">Home</button>
-      <button class="btn" onclick="document.title='Creekside PL Time'">Creekside PL Time</button>
-      <button class="btn" onclick="document.title='New Tab'">New Tab</button>
-      <button class="btn" onclick="document.title='New Tab'">Tinkercad Dashboard</button>
-      Join the discord for more links,updates,web dev,and more! [Discord](https://discord.gg/fWcUWqCy)
+  <div class="tab-content" id="settingsTab">
+    <div class="container">
+      <div class="header">Settings</div>
+      <!-- Logout & Reset -->
+      <div class="btn-container">
+        <button class="btn" onclick="clearAuth()">Log out</button>
+        <button class="btn" onclick="resetAll()">Delete Search Data</button>
+      </div>
+      <!-- Quick Cloaking -->
+      <div class="header" style="margin-top: 20px;">Quick Cloaking</div>
+      <div class="btn-container">
+        <button class="btn" onclick="document.title='Google Docs'">Google Docs</button>
+        <button class="btn" onclick="document.title='Classroom'">Classroom</button>
+        <button class="btn" onclick="document.title='Home'">Home</button>
+        <button class="btn" onclick="document.title='Creekside PL Time'">Creekside PL Time</button>
+        <button class="btn" onclick="document.title='New Tab'">New Tab</button>
+        <button class="btn" onclick="document.title='Aeries login'">Aeries login</button>
+        Join the discord for more links,updates,web dev,and more! [Discord](https://discord.gg/fWcUWqCy )
+      </div>
     </div>
   </div>
-</div>
 
-
-<script>
-  function showTab(tabId, btn) {
-    document.querySelectorAll('.tab-content').forEach(tc => {
-      tc.classList.remove('active');
-    });
-    document.querySelectorAll('.tabBtn').forEach(b => {
-      b.classList.remove('active');
-    });
-    document.getElementById(tabId).classList.add('active');
-    btn.classList.add('active');
-  }
-
-  function checkPassword() {
-    const pw = document.getElementById('passwordInput').value;
-    if (pw === '5084820933') {
-      document.getElementById('authContainer').style.display = 'none';
-      document.getElementById('topbar').style.display = 'flex';
-    } else {
-      alert('Wrong password');
+  <script>
+    function showTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(tc => {
+        tc.classList.remove('active');
+      });
+      document.querySelectorAll('.tabBtn').forEach(b => {
+        b.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
     }
-  }
 
-  function clearAuth() {
-    document.getElementById('authContainer').style.display = 'block';
-    document.getElementById('topbar').style.display = 'none';
-    document.getElementById('passwordInput').value = '';
-  }
-
-  function resetAll() {
-    location.reload();
-  }
-
-  // ✅ FIXED launchProxy function!!
-  function launchProxy(type) {
-    const url = document.getElementById('urlInput').value.trim();
-    if (!url) {
-      alert('Please enter a URL or search query');
-      return;
-    }
-    const output = document.getElementById('output');
-    output.innerHTML = '';
-    if (type === 'iframe') {
-      const iframe = document.createElement('iframe');
-      iframe.src = url.startsWith('http') ? url : 'https://www.webcrawler.com/?q=' + encodeURIComponent(url);
-      iframe.style.width = '100%';
-      iframe.style.height = '60vh';
-      iframe.style.border = 'none';
-      output.appendChild(iframe);
-    } else if (type === 'helios') {
-      const iframe = document.createElement('iframe');
-      iframe.src = "https://helios-browser.rf.gd/";
-      iframe.style.width = '100%';
-      iframe.style.height = '60vh';
-      iframe.style.border = 'none';
-      output.appendChild(iframe);
-    } else if (type === 'blob') {
-      const iframe = document.createElement('iframe');
-      iframe.src = `blobproxy.html?url=${encodeURIComponent(url)}`;
-      iframe.style.width = '100%';
-      iframe.style.height = '60vh';
-      iframe.style.border = 'none';
-      output.appendChild(iframe);
-    }
-  }
-
-  function launchDataCloak() {
-    alert('Data Cloak feature coming soon!');
-  }
-
-  function launchKahoot() {
-    alert('Go to https://kahoot.com.de');
-  }
-
-  function loadMovieSite(url) {
-    document.getElementById('movieFrame').src = url;
-  }
-
-  // tsparticles config for background effect
-  tsParticles.load("tsparticles", {
-    fpsLimit: 60,
-    interactivity: {
-      detectsOn: "canvas",
-      events: {
-        onHover: { enable: true, mode: "repulse" },
-        onClick: { enable: true, mode: "push" },
-        resize: true
-      },
-      modes: {
-        repulse: { distance: 100, duration: 0.4 },
-        push: { quantity: 4 }
+    function checkPassword() {
+      const pw = document.getElementById('passwordInput').value;
+      if (pw === '5084820933') {
+        document.getElementById('authContainer').style.display = 'none';
+        document.getElementById('topbar').style.display = 'flex';
+      } else {
+        alert('Wrong password');
       }
-    },
-    particles: {
-      color: { value: "#ff1a1a" },
-      links: {
-        color: "#ff0000",
-        distance: 120,
-        enable: true,
-        opacity: 0.5,
-        width: 2
+    }
+
+    function clearAuth() {
+      document.getElementById('authContainer').style.display = 'block';
+      document.getElementById('topbar').style.display = 'none';
+      document.getElementById('passwordInput').value = '';
+    }
+
+    function resetAll() {
+      location.reload();
+    }
+
+    function launchProxy(type) {
+      const url = document.getElementById('urlInput').value.trim();
+      if (!url) {
+        alert('Please enter a URL or search query');
+        return;
+      }
+      const output = document.getElementById('output');
+      output.innerHTML = '';
+      if (type === 'iframe') {
+        const iframe = document.createElement('iframe');
+        iframe.src = url.startsWith('http') ? url : 'https://www.webcrawler.com/?q=' + encodeURIComponent(url);
+        iframe.style.width = '100%';
+        iframe.style.height = '60vh';
+        iframe.style.border = 'none';
+        output.appendChild(iframe);
+      } else if (type === 'helios') {
+        const iframe = document.createElement('iframe');
+        iframe.src = " https://helios-browser.rf.gd/ ";
+        iframe.style.width = '100%';
+        iframe.style.height = '60vh';
+        iframe.style.border = 'none';
+        output.appendChild(iframe);
+      } else if (type === 'blob') {
+        const iframe = document.createElement('iframe');
+        iframe.src = `blobproxy.html?url=${encodeURIComponent(url)}`;
+        iframe.style.width = '100%';
+        iframe.style.height = '60vh';
+        iframe.style.border = 'none';
+        output.appendChild(iframe);
+      }
+    }
+
+    function launchDataCloak() {
+      alert('Data Cloak feature coming soon!');
+    }
+
+    function launchKahoot() {
+      alert('Go to https://kahoot.com.de ');
+    }
+
+    function loadMovieSite(url) {
+      document.getElementById('movieFrame').src = url;
+    }
+
+    // Fullscreen toggle
+    function toggleFullscreen(elementId) {
+      const element = document.getElementById(elementId);
+      if (!document.fullscreenElement) {
+        element.requestFullscreen().catch(err => {
+          alert(`Error attempting to enable full-screen: ${err.message}`);
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+
+    // tsparticles config for background effect
+    tsParticles.load("tsparticles", {
+      fpsLimit: 60,
+      interactivity: {
+        detectsOn: "canvas",
+        events: {
+          onHover: { enable: true, mode: "repulse" },
+          onClick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { quantity: 4 }
+        }
       },
-      collisions: { enable: true },
-      move: {
-        direction: "none",
-        enable: true,
-        outMode: "bounce",
-        random: false,
-        speed: 2,
-        straight: false
+      particles: {
+        color: { value: "#ff1a1a" },
+        links: {
+          color: "#ff0000",
+          distance: 120,
+          enable: true,
+          opacity: 0.5,
+          width: 2
+        },
+        collisions: { enable: true },
+        move: {
+          direction: "none",
+          enable: true,
+          outMode: "bounce",
+          random: false,
+          speed: 2,
+          straight: false
+        },
+        number: { density: { enable: true, area: 800 }, value: 50 },
+        opacity: { value: 0.6 },
+        shape: { type: "circle" },
+        size: { random: true, value: 5 }
       },
-      number: { density: { enable: true, area: 800 }, value: 50 },
-      opacity: { value: 0.6 },
-      shape: { type: "circle" },
-      size: { random: true, value: 5 }
-    },
-    detectRetina: true
-  });
-</script>
+      detectRetina: true
+    });
+  </script>
 </body>
 </html>
