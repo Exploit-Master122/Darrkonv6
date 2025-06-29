@@ -93,6 +93,7 @@ Thanks to ultraviolet dev for proxy server.
 
 
 # ***All fastly deployment links are down due to the summer and costs.Domains don't grow on trees.I'll try and get them back up in August,which is my brithday,but also the release of DARRKON v6,the latest version! =-D***
+ ***[Ad for Darrkon](https://exploit-master122.github.io/darrkonad/)***
 
 
 
