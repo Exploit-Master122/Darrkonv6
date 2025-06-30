@@ -360,6 +360,14 @@
     </div>
   </div>
 
+ <script>
+  window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+    e.returnValue = 'Changes you made may not be saved.';
+  });
+</script>
+
+    
   <script>
     function showTab(tabId, btn) {
       document.querySelectorAll('.tab-content').forEach(tc => {
