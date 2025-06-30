@@ -309,7 +309,7 @@
     <div class="container">
       <div class="header">Watch Movies!</div>
       <div class="btn-container">
-        <button class="btn" onclick="loadMovieSite('https://watch.vidora.su ')">Vidora Entertainment(Best!)</button>
+        <button class="btn" onclick="loadMovieSite('https://watch.vidora.su ')">Vidora Entertainment!!</button>
         <button class="btn" onclick="loadMovieSite('https://movies.waves.lat ')">Waves Encrypted Movies</button>
         <button class="btn" onclick="loadMovieSite('https://9anime.org.lv/ ')">9Anime Unblocked</button>
         <button class="btn" onclick="loadMovieSite('https://pluto.tv/ ')">Pluto Television...</button>
@@ -346,6 +346,7 @@
       <div class="btn-container">
         <button class="btn" onclick="clearAuth()">Log out</button>
         <button class="btn" onclick="resetAll()">Delete Search Data</button>
+        <button class="btn" onclick="wtfisthis()">Bypass Mode</button>
       </div>
       <!-- Quick Cloaking -->
       <div class="header" style="margin-top: 20px;">Quick Cloaking</div>
@@ -356,7 +357,7 @@
         <button class="btn" onclick="document.title='Creekside PL Time'">Creekside PL Time</button>
         <button class="btn" onclick="document.title='New Tab'">New Tab</button>
         <button class="btn" onclick="document.title='Aeries login'">Aeries login</button>
-        Join the discord for more links,updates,web dev,and more! [Discord](https://discord.gg/fWcUWqCy) Also,The website does not have a panic button yet,So search up "How to use Alt+Tab".
+        Join the discord for more links,updates,web dev,and more! [Discord](https://discord.gg/fWcUWqCy) Also,The website does not have a panic button yet,So search up "How to use Alt+Tab".Bypass mode is always on,it enables the leave site popup.
       </div>
     </div>
   </div>
@@ -404,7 +405,7 @@
     function launchProxy(type) {
       const url = document.getElementById('urlInput').value.trim();
       if (!url) {
-        alert('Please enter a URL or search query');
+        alert('Add the https:// to the URL,you lazy sloth!');
         return;
       }
       const output = document.getElementById('output');
@@ -418,7 +419,7 @@
         output.appendChild(iframe);
       } else if (type === 'helios') {
         const iframe = document.createElement('iframe');
-        iframe.src = " https://helios-browser.rf.gd/ ";
+        iframe.src = "https://helios-browser.ct.ws/?i=1 ";
         iframe.style.width = '100%';
         iframe.style.height = '60vh';
         iframe.style.border = 'none';
@@ -438,7 +439,7 @@
     }
 
     function launchKahoot() {
-      alert('Go to https://kahoot.com.de ');
+      alert('Go to https://kahoot.com.de .Credits to Szvy.win for this part,follow her on github and discord! =-D If it does not work,try it in the browser. ');
     }
 
     function loadMovieSite(url) {
