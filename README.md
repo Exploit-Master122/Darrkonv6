@@ -78,7 +78,12 @@ Thanks to ultraviolet dev for proxy server.
 [Darrkon BEST](https://schoolwork6thgrade.w3spaces.com/index.html)
 [Darrkon BEST](https://exploit-master122.github.io/DarrkonOS/)
 [Darrkon BEST](https://darrkonrules.playcode.io/)
+[Darkon BETTER]
 
+
+
+- ***DOWNLOAD FOR WINDOWS*** [Download darrkon.exe](https://github.com/Exploit-Master122/DarrkonOS/actions/runs/15961174118/artifacts/3428349843)
+- ***DOWNLOAD FOR LINUX DEBIAN*** [Downloaddarrkon.deb](https://github.com/Exploit-Master122/DarrkonDownload/)
 
 <p> <dev>
 
