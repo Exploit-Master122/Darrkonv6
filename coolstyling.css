@@ -1,0 +1,260 @@
+/* Random Red CSS Styles */
+
+body {
+    background-color: #ffcccc; /* Light red background */
+    color: #990000; /* Dark red text */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #cc0000; /* Bright red */
+    text-align: center;
+    text-shadow: 2px 2px #ff6666; /* Light red shadow */
+}
+
+h2 {
+    color: #b30000; /* Medium red */
+    border-bottom: 2px solid #ff4d4d; /* Light red border */
+    padding: 10px;
+}
+
+p {
+    color: #660000; /* Darker red */
+    line-height: 1.6;
+}
+
+a {
+    color: #ff0000; /* Pure red */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6666; /* Light red on hover */
+    text-decoration: underline;
+}
+
+.button {
+    background-color: #ff3333; /* Bright red button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #cc0000; /* Border in dark red */
+    border-radius: 10px;
+    background-color: #ffe6e6; /* Very light red */
+}
+
+.card {
+    background-color: #ffcccc; /* Light red card */
+    border: 1px solid #ff9999; /* Soft red border */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.card h3 {
+    color: #990000; /* Dark red for card headings */
+}
+
+.card p {
+    color: #660000; /* Darker red for card text */
+}
+
+.footer {
+    background-color: #b30000; /* Dark red footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #cc0000; /* Bright red navbar */
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    background-color: #ff4d4d; /* Light red on hover */
+}
+
+.alert {
+    background-color: #ff9999; /* Soft red alert */
+    color: #990000; /* Dark red text */
+    padding: 15px;
+    border: 1px solid #ff6666; /* Light red border */
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #cc0000; /* Dark red border */
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #ffcccc; /* Light red header */
+    color: #990000; /* Dark red text */
+}
+
+.table tr:nth-child(even) {
+    background-color: #ffe6e6; /* Very light red for even rows */
+}
+
+.table tr:hover {
+    background-color: #ff9999; /* Soft red on hover */
+}/* Random Red CSS Styles */
+
+body {
+    background-color: #ffcccc; /* Light red background */
+    color: #990000; /* Dark red text */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #cc0000; /* Bright red */
+    text-align: center;
+    text-shadow: 2px 2px #ff6666; /* Light red shadow */
+}
+
+h2 {
+    color: #b30000; /* Medium red */
+    border-bottom: 2px solid #ff4d4d; /* Light red border */
+    padding: 10px;
+}
+
+p {
+    color: #660000; /* Darker red */
+    line-height: 1.6;
+}
+
+a {
+    color: #ff0000; /* Pure red */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6666; /* Light red on hover */
+    text-decoration: underline;
+}
+
+.button {
+    background-color: #ff3333; /* Bright red button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #cc0000; /* Border in dark red */
+    border-radius: 10px;
+    background-color: #ffe6e6; /* Very light red */
+}
+
+.card {
+    background-color: #ffcccc; /* Light red card */
+    border: 1px solid #ff9999; /* Soft red border */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.card h3 {
+    color: #990000; /* Dark red for card headings */
+}
+
+.card p {
+    color: #660000; /* Darker red for card text */
+}
+
+.footer {
+    background-color: #b30000; /* Dark red footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #cc0000; /* Bright red navbar */
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    background-color: #ff4d4d; /* Light red on hover */
+}
+
+.alert {
+    background-color: #ff9999; /* Soft red alert */
+    color: #990000; /* Dark red text */
+    padding: 15px;
+    border: 1px solid #ff6666; /* Light red border */
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #cc0000; /* Dark red border */
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #ffcccc; /* Light red header */
+    color: #990000; /* Dark red text */
+}
+
+.table tr:nth-child(even) {
+    background-color: #ffe6e6; /* Very light red for even rows */
+}
+
+.table tr:hover {
+    background-color: #ff9999; /* Soft red on hover */
+}
+
