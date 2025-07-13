@@ -1,0 +1,12 @@
+***HOW TO ALT+TAB WHEN PANIC BUTTON DOES NOT WORK:***
+- First,close all your tabs. (Except this)
+- Open two new windows.
+- Press Control+n to open a new window.(Press twice)
+- In that window,go to an educational website,or whatever website you need to be on.
+- Check if your other window is running in the background.
+- Go to the website that you WANT to be on,in the proxy.
+- Press Alt,(Hold it down for 2 seconds) And Press Tab (Switches windows quickly)
+- That is a tester.
+- Press Alt and Tab as fast as you can,as a smooth switch between two windows!
+- The perfect solution,almost better than a panic button!
+- (Guide by Exploit-Master12)
