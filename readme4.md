@@ -1,0 +1,13 @@
+- ***HOW TO DEPLOY A GITHUB PAGES WEBSITE FOR YOU SKIDS,WHICH MEANS HOW TO MAKE YOUR OWN DARRKON LINK:*** (Script Kiddies)
+- First,make a github account.If you don't know how to do that,then I reccomend that you grow up as a person and study.
+- Go to [The Repo Link](https://github.com/Exploit-Master122/DarrkonOS) and press the button near the little green one,named *Fork*
+- Alright,did it fork the repo? Good.
+- Click the *settings* button.
+- Navigate to the *pages* section.
+- The *Deploy from a branch* option should be selected...
+- The branch should be set to *Main* and *Root folder*
+- Wait for about 5 minutes and twiddle your fingers. (Whistles,plays Poker,Watches TV,Snores)
+- Reload the pages site.
+- It should give you a notification that says "Your site is live at ______The URL_______"
+- Click the URL!
+- You deployed a github pages site!!
