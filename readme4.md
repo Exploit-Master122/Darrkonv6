@@ -1,6 +1,6 @@
 - ***HOW TO DEPLOY A GITHUB PAGES WEBSITE FOR YOU SKIDS,WHICH MEANS HOW TO MAKE YOUR OWN DARRKON LINK FOR SCRIPT KIDDIES:***
 - First,make a Github account.If you don't know how to do that,then I reccomend that you grow up as a person and touch grass and study.
-- Go to [The Repo Link](https://github.com/Exploit-Master122/DarrkonOS) and press the button near the little green one,named *Fork*
+- Go to [The Repo Link](https://github.com/Exploit-Master122/Darrkonv8) and press the button near the little green one,named *Fork*
 - Alright,did it fork the repo? Good.
 - Click the *settings* button.
 - Navigate to the *pages* section.
